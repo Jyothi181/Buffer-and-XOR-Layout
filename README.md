@@ -64,12 +64,63 @@ The output of AND gate produces 1 if and only if all the input states are 1 else
 
 # CIRCUIT DETAILS 
 
-![image](https://github.com/user-attachments/assets/49dc9989-dadc-42d0-becf-9695dd3626f4)
-
-![image](https://github.com/user-attachments/assets/2d88eff0-a88a-4be8-8bc7-2dfb1172c2b9)
+![image](https://github.com/user-attachments/assets/7e4bd363-c733-45fc-bb0a-5b58663e99c9)     ![image](https://github.com/user-attachments/assets/b5ffa1f4-f208-45f5-82fa-735b78d02481)
 
 ![image](https://github.com/user-attachments/assets/942fc757-d0f2-48ae-a9c0-c7288d9d2c07)
 
 
 
+
+Glade Interface Designer is a graphical user interface builder for GTK, with additional components for GNOME.
+Tools -> Activate Library browser, LSW
+To create a new file in glade, select new library and new cell as mentioned.
+File -> Newlib – C5N.tch(Technology library)
+File -> Newcell – save as test file
+After saving the test file, choose the settings for project window. 
+All settings can be done in view option of the tool bar.
+View -> 
+Display options -> Display settings -> Display Grid – Dotted
+			           		     Display Grid settings -> major -4 and minor 0.3 because in C5N technology file, length is 0.6um and width is 1.8um and lambda is l/2 so, 0.3um is set.
+	                         Snap settings -> snap Grid x and y as 0.3
+ 	 	          Miscellaneous -> Uncheck the always pop up option dialogs
+Between two minor nodes l is 0.3um and between two major grids l is 1.2um
+Minimum length is 2lambda = 6um
+Minimum width is 1.8um
+
+Design of layout of CMOS Inverter
+
+File -> Newlib -rename as Inverter_demo – C5N.tch(Technology library)
+File -> Newcell – save as inverter
+
+Active layer
+Length – 0.3*20 = 6um
+Width - 0.3*6 = 1.8um
+Minimum size of polysilicon is length should be 2lambda or the length of transistor.
+
+![image](https://github.com/user-attachments/assets/29a220ef-026f-4afd-958c-aad6a450979b)
+
+![image](https://github.com/user-attachments/assets/0331e3f2-cb71-45e1-8eb2-b60d4b3c346a)
+
+Minimum sizing of via should be 2lambda*2lambda
+NMOS width of 3.6um and PMOS width of 7.2um 
+PMOS width should be twice of the NMOS width
+
+![image](https://github.com/user-attachments/assets/1070f32a-a8da-4561-bed2-35da691e3eef)
+
+![image](https://github.com/user-attachments/assets/87b1fc2e-7a6b-4c7b-99f9-2005b6b7bc67)
+
+![image](https://github.com/user-attachments/assets/4210b8bf-460a-4523-94c1-070dbd3b284b)
+
+Nwell for the pmos structure
+Min separation of nwell from the active region is 6lamda
+Minimum sizing of poly contact is 2lambda * 2 lambda
+Check the DRC Errors:
+Verify DRC – Run DRC - select C5N_DRC.py and run
+Verify -> extract – Run LPE select 
+
+
+![image](https://github.com/user-attachments/assets/86b953b0-fc99-45bd-bc52-c7fd6de3f927)
+
+
+![image](https://github.com/user-attachments/assets/38932941-1efc-4808-82cd-eaeb0f25817f)
 
