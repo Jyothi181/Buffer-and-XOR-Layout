@@ -3,14 +3,18 @@ This repository explains the layout of a buffer using Glade. Here, Buffer is imp
 
 # Table of Contents
 
-Introduction  
-Objectives  
-Circuit Details  
-Simulation  
-Results  
+- Introduction  
+- Objectives
+- Project Structure  
+- Circuit Details
+- Stick Diagram
+- Layer information through colour codes
+- Layer information through Monochrome Encoding
+- Simulation  
+- Results  
 
 
-# INTRODUCTION
+# Introduction
 A digital buffer/logical buffer is an electronic circuit produces the output which exactly matches the input. A digital buffer can be implemented in CMOS logic.
 
 Complementary metal–oxide–semiconductor (CMOS) is a type of MOSFET that uses complementary and symmetrical pairs of p-type and n-type MOSFETs for logic functions. Input is applied at the common gate of PMOS and NMOS transistors.Output is taken from the PMOS and NMOS drain. CMOS technology is used for constructing integrated circuit (IC) chips, including microprocessors, microcontrollers, memory chips and other digital logic circuits. Two important characteristics of CMOS devices are high noise immunity and low static power consumption.
@@ -19,23 +23,23 @@ PMOS: The PMOS transistor is a p-channel device. It conducts current when a nega
 
 NMOS: The NMOS transistor is an n-channel device. It conducts current when a positive voltage (logic high) is applied to its gate terminal with respect to the source terminal. In CMOS, MMOS acts as pull down network in which the source is connected to ground. When logic high(1) is applied is CMOS, the NMOS transistor turns on and connects the output to ground which makes the output to logic low(0).
 
-# OBJECTIVES
+# Objectives
 The main goal of this project are given below
 
 To design the layout of buffer
 To verify the DRC errors
 
-# PROJECT STRUCTURE
+# Project Structure
 
 **Tool** : LTspice  
 **Technology** : C5N technology
 
 Glade Layout Files: Files with .asc extension represents LTspice simulation files for each logic gate. AND.asc : LTspice simulation file for the AND gate. OR.asc : LTspice simulation file for the OR gate. NOT.asc : LTspice simulation file for the NOT gate.
 
-CIRCUIT DETAILS
+# Circuit Details
 The output of AND gate produces 1 if and only if all the input states are 1 else it produces 0. The logic symbol and truth table of 2-input AND gate is shown below.
 
-# STICK DIAGRAM
+## Stick Diagram
 
 - Before fabrication of any IC, the designer prepares the layout of the IC. To draw the layout, one has to captures the complete structure of the circuit, layers used, type of topology. To capture all these information, stick diagram is used.
 
@@ -53,7 +57,7 @@ The output of AND gate produces 1 if and only if all the input states are 1 else
 | p diffusion | yellow |
 | via | black |
 
-## Layer information through Monochrome encoding
+## Layer information through Monochrome Encoding
 
 | Layers | Encoding |
 | ------ | -------|
@@ -123,4 +127,8 @@ Verify -> extract – Run LPE select
 
 
 ![image](https://github.com/user-attachments/assets/38932941-1efc-4808-82cd-eaeb0f25817f)
+
+
+
+(https://github.com/Jyothi181/Basic-Gates-using-LT-Spice/tree/main?tab=readme-ov-file#steps-to-draw-schematics)
 
