@@ -129,6 +129,13 @@ Verify -> extract – Run LPE select
 ![image](https://github.com/user-attachments/assets/38932941-1efc-4808-82cd-eaeb0f25817f)
 
 
+![image](https://github.com/user-attachments/assets/b62c8caa-005e-4c94-9433-1334a4695d8c)
+
+![image](https://github.com/user-attachments/assets/7c23046a-6c28-4a48-8485-ba43c2c6ee34)
+
+
+![image](https://github.com/user-attachments/assets/8bf42874-bb30-4e26-aa63-9853abe2c844)
+
 
 (https://github.com/Jyothi181/Basic-Gates-using-LT-Spice/tree/main?tab=readme-ov-file#steps-to-draw-schematics)
 
