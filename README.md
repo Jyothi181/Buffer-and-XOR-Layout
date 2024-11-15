@@ -7,11 +7,18 @@ This repository explains the layout of a buffer and XOR using Glade. Here, Buffe
 - Objectives
 - Project Structure  
 - Circuit Details
+- Buffer
+- XOR
 - Stick Diagram
 - Layer information through colour codes
 - Layer information through Monochrome Encoding
-- Simulation  
-- Results  
+- Layouts
+- Initial Setup
+- Steps to create Layout
+- Layout of CMOS Buffer
+- Layout of XOR
+- Verification
+- Extraction of Layout
 
 
 # Introduction
@@ -42,17 +49,20 @@ The main goals of this project are given below
 
 - **Tool** : Glade 
 - **Technology** : C5N technology
-
-Glade Layout Files: Files with .asc extension represents LTspice simulation files for each logic gate. AND.asc : LTspice simulation file for the AND gate. OR.asc : LTspice simulation file for the OR gate. NOT.asc : LTspice simulation file for the NOT gate.
+- **Buffer_layout** : Glade Layout File for Buffer.
+- **XOR_layout** : Glade Layout File for XOR Gate.
 
 # Circuit Details
+
+## Buffer
 
 From the truth table, the buffer produces a high(1) output when input A is 1, a low(0) output when input A is 0. The logic symbol and truth table of buffer is shown below.
 
 ![image](https://github.com/user-attachments/assets/7e4bd363-c733-45fc-bb0a-5b58663e99c9)     ![image](https://github.com/user-attachments/assets/cb22f38c-6143-42e7-b411-2fb37bae5277)
 
-
 ***Figure 1: Logic Symbol, Truth table and Logic Circuit of buffer***
+
+## XOR Gate
 
 From the truth table, the XOR gate produces a high(1) output when the inputs A and B are different, and a low(0) output when the inputs are the same. The logic symbol and truth table of buffer is shown below.
 
@@ -61,7 +71,6 @@ From the truth table, the XOR gate produces a high(1) output when the inputs A a
 ![image](https://github.com/user-attachments/assets/972afe72-eb78-4a10-9415-e27330db5e2f)
 
 ***Figure 2: Logic Symbol, Truth table and Logic Circuit of XOR***
-
 
 ## Stick Diagram
 
@@ -119,9 +128,9 @@ Choose the settings for project window.
 - Minimum length is 2lambda = 6um
 - Minimum width is 1.8um
 
-## Layout of CMOS Buffer
+## Steps to create Layout
 
-### Steps to create Layout
+### Layout of CMOS Buffer
 
 - To create a new file in glade, select new library and new cell as mentioned.
 - To create a new library => `File -> Newlib` -save as Inverter_demo – C5N.tch(Technology library)
