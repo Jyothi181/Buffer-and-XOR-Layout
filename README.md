@@ -60,7 +60,7 @@ From the truth table, the XOR gate produces a high(1) output when the inputs A a
 
 ![image](https://github.com/user-attachments/assets/972afe72-eb78-4a10-9415-e27330db5e2f)
 
-***Figure 2: Logic Symbol, Truth table and Logic Circuit of buffer***
+***Figure 2: Logic Symbol, Truth table and Logic Circuit of XOR***
 
 
 ## Stick Diagram
@@ -97,17 +97,18 @@ From the truth table, the XOR gate produces a high(1) output when the inputs A a
 
 # Layouts
 
-Glade Interface Designer is a graphical user interface builder for GTK, with additional components for GNOME.
-Tool Windows -> Activate Library browser, LSW
+- Glade Interface Designer is a graphical user interface builder for GTK, with additional components for GNOME.
+- Toolbar -> Library browser, LSW
+- Library browser – All created libraries can be viewed and accessed.
+- LSW – All metal layers and contacts are picked up from this toolbar.
 
-## Design and layout of CMOS Buffer
+![image](https://github.com/user-attachments/assets/dbf211d1-81ef-4404-a7b3-18abc8a54028)
 
-### Steps to create Layout
+***Figure 4: LSW window*** 
 
-- To create a new file in glade, select new library and new cell as mentioned.
-- To create a new library => `File -> Newlib` -save as Inverter_demo – C5N.tch(Technology library)
-- To create new cell => `File -> Newcell` – save as buffer
-- After saving the file, choose the settings for project window. 
+## Initial Setup
+Choose the settings for project window.
+- Initially activate the library browser
 - All settings can be done in view option of the tool bar.
 - View -> 
    - `Display options -> Display settings -> Display Grid – Dotted`  `Display Grid settings -> major -4 and minor 0.3`
@@ -118,45 +119,70 @@ Tool Windows -> Activate Library browser, LSW
 - Minimum length is 2lambda = 6um
 - Minimum width is 1.8um
 
-Active layer
-Length – 0.3*20 = 6um
-Width - 0.3*6 = 1.8um
-Minimum size of polysilicon is length should be 2lambda or the length of transistor.
+## Layout of CMOS Buffer
 
-![image](https://github.com/user-attachments/assets/29a220ef-026f-4afd-958c-aad6a450979b)
+### Steps to create Layout
 
-![image](https://github.com/user-attachments/assets/0331e3f2-cb71-45e1-8eb2-b60d4b3c346a)
+- To create a new file in glade, select new library and new cell as mentioned.
+- To create a new library => `File -> Newlib` -save as Inverter_demo – C5N.tch(Technology library)
+- To create new cell => `File -> Newcell` – save as buffer
+- Draw the active layer of length – **0.3 * 20 = 6um** and width - **0.3 * 6 = 1.8um**
+- Minimum size of polysilicon is length should be 2lambda or the length of transistor.
 
-Minimum sizing of via should be 2lambda*2lambda
-NMOS width of 3.6um and PMOS width of 7.2um 
-PMOS width should be twice of the NMOS width
+![image](https://github.com/user-attachments/assets/34490c05-0a74-48af-81a1-c58969c7bacc)  
 
-![image](https://github.com/user-attachments/assets/1070f32a-a8da-4561-bed2-35da691e3eef)
+![image](https://github.com/user-attachments/assets/4b9d94e2-d059-4aea-9e8c-c6de08531981)
 
-![image](https://github.com/user-attachments/assets/87b1fc2e-7a6b-4c7b-99f9-2005b6b7bc67)
+***Figure 5: substrate layout***
 
-![image](https://github.com/user-attachments/assets/4210b8bf-460a-4523-94c1-070dbd3b284b)
+- Draw the NMOS transistor width of 3.6um
+- Minimum separation of nwell from the active region is 6lamda
+- Minimum sizing of via should be 2lambda*2lambda
+- Minimum sizing of poly contact is 2lambda * 2lambda
+- Draw the PMOS transistor width of 7.2um.
+- PMOS width should be twice of the NMOS width
+- Draw the Nwell for the pmos structure
 
-Nwell for the pmos structure
-Min separation of nwell from the active region is 6lamda
-Minimum sizing of poly contact is 2lambda * 2 lambda
-Check the DRC Errors:
-Verify DRC – Run DRC - select C5N_DRC.py and run
-Verify -> extract – Run LPE select 
+![image](https://github.com/user-attachments/assets/27bc06c3-e754-49ac-86c8-e2f188803dce)    ![image](https://github.com/user-attachments/assets/b1d7728b-abfb-4050-9c9e-d877513307c6)
 
+***Figure 6: nmos and pmos layout***
 
-![image](https://github.com/user-attachments/assets/86b953b0-fc99-45bd-bc52-c7fd6de3f927)
+Make the connections by using metal layers and connect the input and output. The buffer is formed by connecting two inverters.
 
+![image](https://github.com/user-attachments/assets/557090e5-f8cd-4d82-aba6-231d414d4774)
 
-![image](https://github.com/user-attachments/assets/38932941-1efc-4808-82cd-eaeb0f25817f)
+***Figure 7: Layout of Buffer***
+
+## Layout of XOR
+
+- To create a new file in glade, select new library and new cell as mentioned.
+- To open an existing library => `File -> Open Lib` and open Inverter_demo library
+- To create new cell => `File -> Newcell` – save as xor
 
 
 ![image](https://github.com/user-attachments/assets/b62c8caa-005e-4c94-9433-1334a4695d8c)
 
-![image](https://github.com/user-attachments/assets/7c23046a-6c28-4a48-8485-ba43c2c6ee34)
+***Figure 8: Layout of XOR***
 
+# Verification
+- Once the layout is done, check the DRC errors
+`Verify DRC – Run DRC - select C5N_DRC.py and run`
+- Both the layouts are done with no DRC errors.
+
+![image](https://github.com/user-attachments/assets/f2d410b6-53ed-4c86-881d-2b3d88025635)
 
 ![image](https://github.com/user-attachments/assets/8bf42874-bb30-4e26-aa63-9853abe2c844)
 
+***Figure 9: DRC checks of Buffer and XOR***
 
+# Extraction of Layout
+
+Extract the layout by using below options
+`Verify -> extract – Run LPE select`
+
+![image](https://github.com/user-attachments/assets/d8f78a6d-5bf1-46ab-bc76-8d4def36d7d5)
+
+![image](https://github.com/user-attachments/assets/7c23046a-6c28-4a48-8485-ba43c2c6ee34)
+
+***Figure 10: Extraction of Buffer and XOR***
 
