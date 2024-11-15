@@ -1,5 +1,5 @@
-# Buffer-Layout
-This repository explains the layout of a buffer using Glade. Here, Buffer is implemented in CMOS logic. It primarily focuses on the layout design and check for the DRC errors if any exist. 
+# Buffer-and-XOR-Layout
+This repository explains the layout of a buffer and XOR using Glade. Here, Buffer and XOR are implemented in CMOS logic. It primarily focuses on the layout design and check for the DRC errors if any exist. 
 
 # Table of Contents
 
@@ -15,29 +15,53 @@ This repository explains the layout of a buffer using Glade. Here, Buffer is imp
 
 
 # Introduction
-A digital buffer/logical buffer is an electronic circuit produces the output which exactly matches the input. A digital buffer can be implemented in CMOS logic.
 
-Complementary metal–oxide–semiconductor (CMOS) is a type of MOSFET that uses complementary and symmetrical pairs of p-type and n-type MOSFETs for logic functions. Input is applied at the common gate of PMOS and NMOS transistors.Output is taken from the PMOS and NMOS drain. CMOS technology is used for constructing integrated circuit (IC) chips, including microprocessors, microcontrollers, memory chips and other digital logic circuits. Two important characteristics of CMOS devices are high noise immunity and low static power consumption.
+**CMOS:** Complementary metal–oxide–semiconductor (CMOS) is a type of MOSFET that uses complementary and symmetrical pairs of p-type and n-type MOSFETs for logic functions. Input is applied at the common gate of PMOS and NMOS transistors.Output is taken from the PMOS and NMOS drain. CMOS technology is used for constructing integrated circuit (IC) chips, including microprocessors, microcontrollers, memory chips and other digital logic circuits. Two important characteristics of CMOS devices are high noise immunity and low static power consumption.
 
-PMOS: The PMOS transistor is a p-channel device. It conducts current when a negative voltage (logic low) is applied to its gate terminal with respect to the source terminal. In CMOS, PMOS acts as pull up network in which the source is connected to VDD. When logic low(0) is applied is CMOS, the PMOS transistor turns on and connects the VDD to output which makes the output to logic high(1).
+**PMOS:** The PMOS transistor is a p-channel device. It conducts current when a negative voltage (logic low) is applied to its gate terminal with respect to the source terminal. In CMOS, PMOS acts as pull up network in which the source is connected to VDD. When logic low(0) is applied is CMOS, the PMOS transistor turns on and connects the VDD to output which makes the output to logic high(1).
 
-NMOS: The NMOS transistor is an n-channel device. It conducts current when a positive voltage (logic high) is applied to its gate terminal with respect to the source terminal. In CMOS, MMOS acts as pull down network in which the source is connected to ground. When logic high(1) is applied is CMOS, the NMOS transistor turns on and connects the output to ground which makes the output to logic low(0).
+**NMOS:** The NMOS transistor is an n-channel device. It conducts current when a positive voltage (logic high) is applied to its gate terminal with respect to the source terminal. In CMOS, MMOS acts as pull down network in which the source is connected to ground. When logic high(1) is applied is CMOS, the NMOS transistor turns on and connects the output to ground which makes the output to logic low(0).
+
+**Buffer:** A digital buffer/logical buffer is an electronic circuit whose output is same as the input
+- Buffers are used to introduce delays in the circuit
+- It isolates one circuit from another
+- To increase the fanout of the circuit
+- To match the impedances between two circuits
+- To prevent signal distortions and power loss
+- To use it as repeaters
+
+**XOR Gate:** It takes two inputs and produces an output which is the result of the exclusive OR operation performed on the combination of inputs. This logic gate produces a high or logic 1 output when both of the inputs are dissimilar, otherwise, it produces a logic 0 output.
 
 # Objectives
-The main goal of this project are given below
+The main goals of this project are given below
 
-To design the layout of buffer
-To verify the DRC errors
+- To design the layout of buffer and XOR Gate
+- To verify the DRC errors
 
 # Project Structure
 
-**Tool** : LTspice  
-**Technology** : C5N technology
+- **Tool** : Glade 
+- **Technology** : C5N technology
 
 Glade Layout Files: Files with .asc extension represents LTspice simulation files for each logic gate. AND.asc : LTspice simulation file for the AND gate. OR.asc : LTspice simulation file for the OR gate. NOT.asc : LTspice simulation file for the NOT gate.
 
 # Circuit Details
-The output of AND gate produces 1 if and only if all the input states are 1 else it produces 0. The logic symbol and truth table of 2-input AND gate is shown below.
+
+From the truth table, the buffer produces a high(1) output when input A is 1, a low(0) output when input A is 0. The logic symbol and truth table of buffer is shown below.
+
+![image](https://github.com/user-attachments/assets/7e4bd363-c733-45fc-bb0a-5b58663e99c9)     ![image](https://github.com/user-attachments/assets/cb22f38c-6143-42e7-b411-2fb37bae5277)
+
+
+***Figure 1: Logic Symbol, Truth table and Logic Circuit of buffer***
+
+From the truth table, the XOR gate produces a high(1) output when the inputs A and B are different, and a low(0) output when the inputs are the same. The logic symbol and truth table of buffer is shown below.
+
+![image](https://github.com/user-attachments/assets/733be94b-676b-4c57-a735-c3359e16df75)     ![image](https://github.com/user-attachments/assets/46e99cb6-b716-401c-82c7-6fe3633aea48)
+
+![image](https://github.com/user-attachments/assets/972afe72-eb78-4a10-9415-e27330db5e2f)
+
+***Figure 2: Logic Symbol, Truth table and Logic Circuit of buffer***
+
 
 ## Stick Diagram
 
@@ -45,7 +69,7 @@ The output of AND gate produces 1 if and only if all the input states are 1 else
 
 - VLSI aims to translate the circuit concepts onto the silicon.Stick diagrams are the means of capturing topography and layer information. Stick diagrams are convey layer information through colour codes (or monochrome encoding)
 
-- There are 4 layers : N diffusion, P diffusion, poly silicon, metal
+- There are 4 layers : N diffusion, P diffusion, poly silicon and metal
 
 ## Layer information through colour codes
 
@@ -66,35 +90,33 @@ The output of AND gate produces 1 if and only if all the input states are 1 else
 | n diffusion | -------- |
 | p diffusion | _ _ _ _ _ |
 
-# CIRCUIT DETAILS 
-
-![image](https://github.com/user-attachments/assets/7e4bd363-c733-45fc-bb0a-5b58663e99c9)     ![image](https://github.com/user-attachments/assets/b5ffa1f4-f208-45f5-82fa-735b78d02481)
 
 ![image](https://github.com/user-attachments/assets/942fc757-d0f2-48ae-a9c0-c7288d9d2c07)
 
+***Figure 3: Stick Diagram of buffer***
 
-
+# Layouts
 
 Glade Interface Designer is a graphical user interface builder for GTK, with additional components for GNOME.
-Tools -> Activate Library browser, LSW
-To create a new file in glade, select new library and new cell as mentioned.
-File -> Newlib – C5N.tch(Technology library)
-File -> Newcell – save as test file
-After saving the test file, choose the settings for project window. 
-All settings can be done in view option of the tool bar.
-View -> 
-Display options -> Display settings -> Display Grid – Dotted
-			           		     Display Grid settings -> major -4 and minor 0.3 because in C5N technology file, length is 0.6um and width is 1.8um and lambda is l/2 so, 0.3um is set.
-	                         Snap settings -> snap Grid x and y as 0.3
- 	 	          Miscellaneous -> Uncheck the always pop up option dialogs
-Between two minor nodes l is 0.3um and between two major grids l is 1.2um
-Minimum length is 2lambda = 6um
-Minimum width is 1.8um
+Tool Windows -> Activate Library browser, LSW
 
-Design of layout of CMOS Inverter
+## Design and layout of CMOS Buffer
 
-File -> Newlib -rename as Inverter_demo – C5N.tch(Technology library)
-File -> Newcell – save as inverter
+### Steps to create Layout
+
+- To create a new file in glade, select new library and new cell as mentioned.
+- To create a new library => `File -> Newlib` -save as Inverter_demo – C5N.tch(Technology library)
+- To create new cell => `File -> Newcell` – save as buffer
+- After saving the file, choose the settings for project window. 
+- All settings can be done in view option of the tool bar.
+- View -> 
+   - `Display options -> Display settings -> Display Grid – Dotted`  `Display Grid settings -> major -4 and minor 0.3`
+   - Because in C5N technology file, length is 0.6um and width is 1.8um and lambda is l/2 so, 0.3um is set.
+   - `Display options -> Snap settings -> snap Grid X and Y as 0.3`
+   - `Display options -> Miscellaneous -> Uncheck the always pop up option dialogs`
+- Between two minor nodes l is 0.3um and between two major grids l is 1.2um
+- Minimum length is 2lambda = 6um
+- Minimum width is 1.8um
 
 Active layer
 Length – 0.3*20 = 6um
@@ -137,5 +159,4 @@ Verify -> extract – Run LPE select
 ![image](https://github.com/user-attachments/assets/8bf42874-bb30-4e26-aa63-9853abe2c844)
 
 
-(https://github.com/Jyothi181/Basic-Gates-using-LT-Spice/tree/main?tab=readme-ov-file#steps-to-draw-schematics)
 
