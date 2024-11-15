@@ -149,7 +149,7 @@ Choose the settings for project window.
 
 Make the connections by using metal layers and connect the input and output. The buffer is formed by connecting two inverters.
 
-![image](https://github.com/user-attachments/assets/557090e5-f8cd-4d82-aba6-231d414d4774)
+![image](https://github.com/user-attachments/assets/046915a7-f562-4f61-9246-3f7ad3bcab9e)
 
 ***Figure 7: Layout of Buffer***
 
@@ -159,8 +159,7 @@ Make the connections by using metal layers and connect the input and output. The
 - To open an existing library => `File -> Open Lib` and open Inverter_demo library
 - To create new cell => `File -> Newcell` – save as xor
 
-
-![image](https://github.com/user-attachments/assets/b62c8caa-005e-4c94-9433-1334a4695d8c)
+![image](https://github.com/user-attachments/assets/de00538c-87ed-403c-a67e-de61b8f5c700)
 
 ***Figure 8: Layout of XOR***
 
@@ -171,7 +170,7 @@ Make the connections by using metal layers and connect the input and output. The
 
 ![image](https://github.com/user-attachments/assets/f2d410b6-53ed-4c86-881d-2b3d88025635)
 
-![image](https://github.com/user-attachments/assets/8bf42874-bb30-4e26-aa63-9853abe2c844)
+![image](https://github.com/user-attachments/assets/145c1f7a-d6bc-4791-a4f2-818f5893ab47)
 
 ***Figure 9: DRC checks of Buffer and XOR***
 
@@ -180,9 +179,10 @@ Make the connections by using metal layers and connect the input and output. The
 Extract the layout by using below options
 `Verify -> extract – Run LPE select`
 
-![image](https://github.com/user-attachments/assets/d8f78a6d-5bf1-46ab-bc76-8d4def36d7d5)
 
-![image](https://github.com/user-attachments/assets/7c23046a-6c28-4a48-8485-ba43c2c6ee34)
+![image](https://github.com/user-attachments/assets/525a997e-f1ec-4669-b51c-48f4b150861d)
+
+![image](https://github.com/user-attachments/assets/121bcf18-6ad7-4051-a58c-1cc8ab785e89)
 
 ***Figure 10: Extraction of Buffer and XOR***
 
