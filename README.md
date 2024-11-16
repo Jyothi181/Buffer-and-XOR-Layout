@@ -23,12 +23,6 @@ This repository explains the layout of a buffer and XOR using Glade. Here, Buffe
 
 # Introduction
 
-**CMOS:** Complementary metal–oxide–semiconductor (CMOS) is a type of MOSFET that uses complementary and symmetrical pairs of p-type and n-type MOSFETs for logic functions. Input is applied at the common gate of PMOS and NMOS transistors.Output is taken from the PMOS and NMOS drain. CMOS technology is used for constructing integrated circuit (IC) chips, including microprocessors, microcontrollers, memory chips and other digital logic circuits. Two important characteristics of CMOS devices are high noise immunity and low static power consumption.
-
-**PMOS:** The PMOS transistor is a p-channel device. It conducts current when a negative voltage (logic low) is applied to its gate terminal with respect to the source terminal. In CMOS, PMOS acts as pull up network in which the source is connected to VDD. When logic low(0) is applied is CMOS, the PMOS transistor turns on and connects the VDD to output which makes the output to logic high(1).
-
-**NMOS:** The NMOS transistor is an n-channel device. It conducts current when a positive voltage (logic high) is applied to its gate terminal with respect to the source terminal. In CMOS, MMOS acts as pull down network in which the source is connected to ground. When logic high(1) is applied is CMOS, the NMOS transistor turns on and connects the output to ground which makes the output to logic low(0).
-
 **Buffer:** A digital buffer/logical buffer is an electronic circuit whose output is same as the input
 - Buffers are used to introduce delays in the circuit
 - It isolates one circuit from another
@@ -37,7 +31,13 @@ This repository explains the layout of a buffer and XOR using Glade. Here, Buffe
 - To prevent signal distortions and power loss
 - To use it as repeaters
 
-**XOR Gate:** It takes two inputs and produces an output which is the result of the exclusive OR operation performed on the combination of inputs. This logic gate produces a high or logic 1 output when both of the inputs are dissimilar, otherwise, it produces a logic 0 output.
+**XOR Gate:** It is an Exclusive OR gate. It takes two inputs and produces an output which is the result of the exclusive OR operation performed on the combination of inputs. This logic gate produces a high or logic 1 output when both of the inputs are dissimilar, otherwise, it produces a logic 0 output. XOR gate hass several applications including data encryption, error detection and correction, arithmetic operations and magnitude comparision.
+
+**CMOS:** Complementary metal–oxide–semiconductor (CMOS) is a type of MOSFET that uses complementary and symmetrical pairs of p-type and n-type MOSFETs for logic functions. Input is applied at the common gate of PMOS and NMOS transistors.Output is taken from the PMOS and NMOS drain. CMOS technology is used for constructing integrated circuit (IC) chips, including microprocessors, microcontrollers, memory chips and other digital logic circuits. Two important characteristics of CMOS devices are high noise immunity and low static power consumption.
+
+**PMOS:** The PMOS transistor is a p-channel device. It conducts current when a negative voltage (logic low) is applied to its gate terminal with respect to the source terminal. In CMOS, PMOS acts as pull up network in which the source is connected to VDD. When logic low(0) is applied is CMOS, the PMOS transistor turns on and connects the VDD to output which makes the output to logic high(1).
+
+**NMOS:** The NMOS transistor is an n-channel device. It conducts current when a positive voltage (logic high) is applied to its gate terminal with respect to the source terminal. In CMOS, MMOS acts as pull down network in which the source is connected to ground. When logic high(1) is applied is CMOS, the NMOS transistor turns on and connects the output to ground which makes the output to logic low(0).
 
 # Objectives
 The main goals of this project are given below
@@ -173,7 +173,7 @@ Make the connections by using metal layers and connect the input and output. The
 ***Figure 8: Layout of XOR***
 
 # Verification
-- Once the layout is done, check the DRC errors
+- Once the layout is done, check the DRC(Design Rule Checks) errors
 `Verify DRC – Run DRC - select C5N_DRC.py and run`
 - Both the layouts are done with no DRC errors.
 
