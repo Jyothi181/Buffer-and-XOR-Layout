@@ -58,7 +58,7 @@ The main goals of this project are given below
 
 From the truth table, the buffer produces a high(1) output when input A is 1, a low(0) output when input A is 0. The logic symbol and truth table of buffer is shown below.
 
-![image](https://github.com/user-attachments/assets/7e4bd363-c733-45fc-bb0a-5b58663e99c9)     ![image](https://github.com/user-attachments/assets/cb22f38c-6143-42e7-b411-2fb37bae5277)
+![image](https://github.com/Jyothi181/Pictures/blob/main/Picture36.png)     ![image](https://github.com/Jyothi181/Pictures/blob/main/Picture37.png)
 
 ***Figure 1: Logic Symbol, Truth table and Logic Circuit of buffer***
 
@@ -66,9 +66,9 @@ From the truth table, the buffer produces a high(1) output when input A is 1, a 
 
 From the truth table, the XOR gate produces a high(1) output when the inputs A and B are different, and a low(0) output when the inputs are the same. The logic symbol and truth table of buffer is shown below.
 
-![image](https://github.com/user-attachments/assets/733be94b-676b-4c57-a735-c3359e16df75)     ![image](https://github.com/user-attachments/assets/46e99cb6-b716-401c-82c7-6fe3633aea48)
+![image](https://github.com/Jyothi181/Pictures/blob/main/Picture38.png)     ![image](https://github.com/Jyothi181/Pictures/blob/main/Picture39.png)
 
-![image](https://github.com/user-attachments/assets/972afe72-eb78-4a10-9415-e27330db5e2f)
+![image](https://github.com/Jyothi181/Pictures/blob/main/Picture40.png)
 
 ***Figure 2: Logic Symbol, Truth table and Logic Circuit of XOR***
 
@@ -100,7 +100,7 @@ From the truth table, the XOR gate produces a high(1) output when the inputs A a
 | p diffusion | _ _ _ _ _ |
 
 
-![image](https://github.com/user-attachments/assets/942fc757-d0f2-48ae-a9c0-c7288d9d2c07)
+![image](https://github.com/Jyothi181/Pictures/blob/main/Picture41.png)
 
 ***Figure 3: Stick Diagram of buffer***
 
@@ -111,7 +111,7 @@ From the truth table, the XOR gate produces a high(1) output when the inputs A a
 - Library browser – All created libraries can be viewed and accessed.
 - LSW – All metal layers and contacts are picked up from this toolbar.
 
-![image](https://github.com/user-attachments/assets/dbf211d1-81ef-4404-a7b3-18abc8a54028)
+![image](https://github.com/Jyothi181/Pictures/blob/main/Picture42.png)
 
 ***Figure 4: LSW window*** 
 
@@ -138,9 +138,9 @@ Choose the settings for project window.
 - Draw the active layer of length – **0.3 * 20 = 6um** and width - **0.3 * 6 = 1.8um**
 - Minimum size of polysilicon is length should be 2lambda or the length of transistor.
 
-![image](https://github.com/user-attachments/assets/34490c05-0a74-48af-81a1-c58969c7bacc)  
+![image](https://github.com/Jyothi181/Pictures/blob/main/Picture43.png)  
 
-![image](https://github.com/user-attachments/assets/4b9d94e2-d059-4aea-9e8c-c6de08531981)
+![image](https://github.com/Jyothi181/Pictures/blob/main/Picture44.png)
 
 ***Figure 5: substrate layout***
 
@@ -152,13 +152,13 @@ Choose the settings for project window.
 - PMOS width should be twice of the NMOS width
 - Draw the Nwell for the pmos structure
 
-![image](https://github.com/user-attachments/assets/27bc06c3-e754-49ac-86c8-e2f188803dce)    ![image](https://github.com/user-attachments/assets/b1d7728b-abfb-4050-9c9e-d877513307c6)
+![image](https://github.com/Jyothi181/Pictures/blob/main/Picture45.png)    ![image](https://github.com/Jyothi181/Pictures/blob/main/Picture46.png)
 
 ***Figure 6: nmos and pmos layout***
 
 Make the connections by using metal layers and connect the input and output. The buffer is formed by connecting two inverters.
 
-![image](https://github.com/user-attachments/assets/046915a7-f562-4f61-9246-3f7ad3bcab9e)
+![image](https://github.com/Jyothi181/Pictures/blob/main/Picture47.png)
 
 ***Figure 7: Layout of Buffer***
 
@@ -168,7 +168,7 @@ Make the connections by using metal layers and connect the input and output. The
 - To open an existing library => `File -> Open Lib` and open Inverter_demo library
 - To create new cell => `File -> Newcell` – save as xor
 
-![image](https://github.com/user-attachments/assets/de00538c-87ed-403c-a67e-de61b8f5c700)
+![image](https://github.com/Jyothi181/Pictures/blob/main/Picture48.png)
 
 ***Figure 8: Layout of XOR***
 
@@ -177,9 +177,9 @@ Make the connections by using metal layers and connect the input and output. The
 `Verify DRC – Run DRC - select C5N_DRC.py and run`
 - Both the layouts are done with no DRC errors.
 
-![image](https://github.com/user-attachments/assets/f2d410b6-53ed-4c86-881d-2b3d88025635)
+![image](https://github.com/Jyothi181/Pictures/blob/main/Picture49.png)
 
-![image](https://github.com/user-attachments/assets/145c1f7a-d6bc-4791-a4f2-818f5893ab47)
+![image](https://github.com/Jyothi181/Pictures/blob/main/Picture50.png)
 
 ***Figure 9: DRC checks of Buffer and XOR***
 
@@ -189,9 +189,9 @@ Extract the layout by using below options
 `Verify -> extract – Run LPE select`
 
 
-![image](https://github.com/user-attachments/assets/525a997e-f1ec-4669-b51c-48f4b150861d)
+![image](https://github.com/Jyothi181/Pictures/blob/main/Picture51.png)
 
-![image](https://github.com/user-attachments/assets/121bcf18-6ad7-4051-a58c-1cc8ab785e89)
+![image](https://github.com/Jyothi181/Pictures/blob/main/Picture52.png)
 
 ***Figure 10: Extraction of Buffer and XOR***
 
