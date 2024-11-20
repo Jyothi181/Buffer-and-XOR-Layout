@@ -59,7 +59,7 @@ The main goals of this project are given below
 
 From the truth table, the buffer produces a high(1) output when input A is 1, a low(0) output when input A is 0. The logic symbol and truth table of buffer is shown below.
 
-![image](https://github.com/Jyothi181/Pictures/blob/main/Picture36.png)     ![image](https://github.com/Jyothi181/Pictures/blob/main/Picture37.png)
+![image](https://github.com/Jyothi181/Buffer-and-XOR-Layout/blob/main/Layout_Images/Picture36.png)     ![image](https://github.com/Jyothi181/Buffer-and-XOR-Layout/blob/main/Layout_Images/Picture37.png)
 
 ***Figure 1: Logic Symbol, Truth table and Logic Circuit of buffer***
 
@@ -67,9 +67,9 @@ From the truth table, the buffer produces a high(1) output when input A is 1, a 
 
 From the truth table, the XOR gate produces a high(1) output when the inputs A and B are different, and a low(0) output when the inputs are the same. The logic symbol and truth table of buffer is shown below.
 
-![image](https://github.com/Jyothi181/Pictures/blob/main/Picture38.png)     ![image](https://github.com/Jyothi181/Pictures/blob/main/Picture39.png)
+![image](https://github.com/Jyothi181/Buffer-and-XOR-Layout/blob/main/Layout_Images/Picture38.png)     ![image](https://github.com/Jyothi181/Buffer-and-XOR-Layout/blob/main/Layout_Images/Picture39.png)
 
-![image](https://github.com/Jyothi181/Pictures/blob/main/Picture40.png)
+![image](https://github.com/Jyothi181/Buffer-and-XOR-Layout/blob/main/Layout_Images/Picture40.png)
 
 ***Figure 2: Logic Symbol, Truth table and Logic Circuit of XOR***
 
@@ -101,7 +101,7 @@ From the truth table, the XOR gate produces a high(1) output when the inputs A a
 | p diffusion | _ _ _ _ _ |
 
 
-![image](https://github.com/Jyothi181/Pictures/blob/main/Picture41.png)
+![image](https://github.com/Jyothi181/Buffer-and-XOR-Layout/blob/main/Layout_Images/Picture41.png)
 
 ***Figure 3: Stick Diagram of buffer***
 
@@ -112,7 +112,7 @@ From the truth table, the XOR gate produces a high(1) output when the inputs A a
 - Library browser – All created libraries can be viewed and accessed.
 - LSW – All metal layers and contacts are picked up from this toolbar.
 
-![image](https://github.com/Jyothi181/Pictures/blob/main/Picture42.png)
+![image](https://github.com/Jyothi181/Buffer-and-XOR-Layout/blob/main/Layout_Images/Picture42.png)
 
 ***Figure 4: LSW window*** 
 
@@ -137,9 +137,9 @@ Choose the settings for project window.
 - Draw the active layer of length – **0.3 * 20 = 6um** and width - **0.3 * 6 = 1.8um**
 - Minimum size of polysilicon is length should be 2lambda or the length of transistor.
 
-![image](https://github.com/Jyothi181/Pictures/blob/main/Picture43.png)  
+![image](https://github.com/Jyothi181/Buffer-and-XOR-Layout/blob/main/Layout_Images/Picture43.png)  
 
-![image](https://github.com/Jyothi181/Pictures/blob/main/Picture44.png)
+![image](https://github.com/Jyothi181/Buffer-and-XOR-Layout/blob/main/Layout_Images/Picture44.png)
 
 ***Figure 5: substrate layout***
 
@@ -153,13 +153,13 @@ Choose the settings for project window.
 - PMOS width should be twice of the NMOS width
 - Draw the Nwell for the pmos structure
 
-![image](https://github.com/Jyothi181/Pictures/blob/main/Picture45.png)    ![image](https://github.com/Jyothi181/Pictures/blob/main/Picture46.png)
+![image](https://github.com/Jyothi181/Buffer-and-XOR-Layout/blob/main/Layout_Images/Picture45.png)    ![image](https://github.com/Jyothi181/Buffer-and-XOR-Layout/blob/main/Layout_Images/Picture46.png)
 
 ***Figure 6: nmos and pmos layout***
 
 Make the connections by using metal layers and connect the input and output. The buffer is formed by connecting two inverters.
 
-![image](https://github.com/Jyothi181/Pictures/blob/main/Picture47.png)
+![image](https://github.com/Jyothi181/Buffer-and-XOR-Layout/blob/main/Layout_Images/Picture47.png)
 
 ***Figure 7: Layout of Buffer***
 
@@ -169,7 +169,7 @@ Make the connections by using metal layers and connect the input and output. The
 - To open an existing library => `File -> Open Lib` and open Inverter_demo library
 - To create new cell => `File -> Newcell` – save as xor
 
-![image](https://github.com/Jyothi181/Pictures/blob/main/Picture48.png)
+![image](https://github.com/Jyothi181/Buffer-and-XOR-Layout/blob/main/Layout_Images/Picture48.png)
 
 ***Figure 8: Layout of XOR***
 
@@ -178,9 +178,9 @@ Make the connections by using metal layers and connect the input and output. The
 `Verify DRC – Run DRC - select C5N_DRC.py and run`
 - Both the layouts are done with no DRC errors.
 
-![image](https://github.com/Jyothi181/Pictures/blob/main/Picture49.png)
+![image](https://github.com/Jyothi181/Buffer-and-XOR-Layout/blob/main/Layout_Images/Picture49.png)
 
-![image](https://github.com/Jyothi181/Pictures/blob/main/Picture50.png)
+![image](https://github.com/Jyothi181/Buffer-and-XOR-Layout/blob/main/Layout_Images/Picture50.png)
 
 ***Figure 9: DRC checks of Buffer and XOR***
 
