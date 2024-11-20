@@ -3,22 +3,23 @@ This repository explains the layout of a buffer and XOR using Glade. Here, Buffe
 
 # Table of Contents
 
-- Introduction  
-- Objectives
-- Project Structure  
-- Circuit Details
-- Buffer
-- XOR
-- Stick Diagram
-- Layer information through colour codes
-- Layer information through Monochrome Encoding
-- Layouts
-- Initial Setup
-- Steps to create Layout
-- Layout of CMOS Buffer
-- Layout of XOR
-- Verification
-- Extraction of Layout
+- [Introduction](#Introduction)
+- [Objectives](#Objectives)
+- [Project Structure](#Project-Structure)
+- [Circuit Details](#Circuit-Details)
+     - [Buffer](#Buffer)
+     - [XOR Gate](#XOR-Gate)
+- [Stick Diagram](#Stick-Diagram)
+     - [Layer information through colour codes](#Layer-information-through-colour-codes)
+     - [Layer information through Monochrome Encoding](#Layer-information-through-Monochrome-Encoding)
+- [Layouts](#Layouts)
+     - [Initial Setup](#Initial-Setup)
+     - [Steps to create Layout](#Steps-to-create-Layout)
+     - [Layout of CMOS Buffer](#Layout-of-CMOS-Buffer)
+     - [Layout of XOR](#Layout-of-XOR)
+- [Verification](#Verification)
+- [Extraction of Layout](#Extraction-of-Layout)
+
 
 
 # Introduction
@@ -72,7 +73,7 @@ From the truth table, the XOR gate produces a high(1) output when the inputs A a
 
 ***Figure 2: Logic Symbol, Truth table and Logic Circuit of XOR***
 
-## Stick Diagram
+# Stick Diagram
 
 - Before fabrication of any IC, the designer prepares the layout of the IC. To draw the layout, one has to captures the complete structure of the circuit, layers used, type of topology. To capture all these information, stick diagram is used.
 
@@ -130,8 +131,6 @@ Choose the settings for project window.
 
 ## Steps to create Layout
 
-### Layout of CMOS Buffer
-
 - To create a new file in glade, select new library and new cell as mentioned.
 - To create a new library => `File -> Newlib` -save as Inverter_demo – C5N.tch(Technology library)
 - To create new cell => `File -> Newcell` – save as buffer
@@ -143,6 +142,8 @@ Choose the settings for project window.
 ![image](https://github.com/Jyothi181/Pictures/blob/main/Picture44.png)
 
 ***Figure 5: substrate layout***
+
+## Layout of CMOS Buffer
 
 - Draw the NMOS transistor width of 3.6um
 - Minimum separation of nwell from the active region is 6lamda
