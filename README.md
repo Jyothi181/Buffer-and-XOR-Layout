@@ -190,9 +190,9 @@ Extract the layout by using below options
 `Verify -> extract – Run LPE select`
 
 
-![image](https://github.com/Jyothi181/Pictures/blob/main/Picture51.png)
+![image](https://github.com/Jyothi181/Buffer-and-XOR-Layout/blob/main/Layout_Images/Picture51.png)
 
-![image](https://github.com/Jyothi181/Pictures/blob/main/Picture52.png)
+![image](https://github.com/Jyothi181/Buffer-and-XOR-Layout/blob/main/Layout_Images/Picture52.png)
 
 ***Figure 10: Extraction of Buffer and XOR***
 
